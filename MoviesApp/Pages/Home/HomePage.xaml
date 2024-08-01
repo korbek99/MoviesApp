@@ -1,9 +1,26 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="MoviesApp.HomePage">
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviesApp.HomePage">
+
+    <StackLayout Padding="10">
+        <!-- Agregar un SearchBar para la búsqueda -->
+        <SearchBar Placeholder="Search by title" TextChanged="OnSearchBarTextChanged" />
+
+        <ListView x:Name="MoviesListView" ItemTapped="OnMovieTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="1">
+                            <Image Source="{Binding PosterPath}" WidthRequest="150" HeightRequest="225"/>
+                            <Label Text="{Binding OriginalTitle}" VerticalOptions="Center" Margin="1,0" FontSize="10"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
 </ContentPage>
+
+

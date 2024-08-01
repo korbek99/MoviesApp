@@ -1,9 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="MoviesApp.InfoPage">
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviesApp.InfoPage">
+
+    <StackLayout Padding="10">
+        <Label Text="MoviesApp" FontSize="24" HorizontalOptions="Center"/>
+        <Label Text="Created By: Korbek" FontSize="18" Padding="10"/>
+        <Label Text="Language: C#" FontSize="18" Padding="10"/>
+        <Label Text="Date: 31-072024" FontSize="18" Padding="10"/>
+        <Label Text="Test Old Xamarin Form 2019." FontSize="18" Padding="20"/>
+    </StackLayout>
+
 </ContentPage>
+
+
